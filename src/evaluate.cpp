@@ -110,11 +110,11 @@ using namespace Trace;
 
 namespace {
 
-  // Threshold for lazy and space evaluation
+  // Threshold for laz, space, and NNUE evaluation
   constexpr Value LazyThreshold1 =  Value(1400);
   constexpr Value LazyThreshold2 =  Value(1300);
   constexpr Value SpaceThreshold = Value(12222);
-  constexpr Value NNUEThreshold  =   Value(575);
+  constexpr Value NNUEThreshold  =   Value(57500); // large value switches off classical eval
 
   // KingAttackWeights[PieceType] contains king attack weights by piece type
   constexpr int KingAttackWeights[PIECE_TYPE_NB] = { 0, 0, 81, 52, 44, 10 };
